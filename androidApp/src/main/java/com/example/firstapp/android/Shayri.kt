@@ -1,5 +1,6 @@
 package com.example.firstapp.android
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
@@ -478,7 +479,15 @@ fun Greeting(name: String = "Shayri", shayri: Shayri? = null) {
                                 text = blankarray[i],
                                 modifier = Modifier
                                     .padding(10.dp)
-                                    .fillMaxWidth(),
+                                    .fillMaxWidth()
+                                    .clickable {
+                                        shayri!!.startActivity(
+                                            Intent(
+                                                shayri, PageShayri::class.java
+                                            ).putExtra("array", blankarray)
+                                        )
+
+                                    },
                                 fontSize = 20.sp
                             )
                             Divider(thickness = 2.dp, color = Color.White)
@@ -507,7 +516,7 @@ fun Greeting(name: String = "Shayri", shayri: Shayri? = null) {
                                         .fillMaxSize()
                                         .weight(1f)
                                         .clickable {
-                                            copyTextToClipboard("hello",shayri)
+                                            copyTextToClipboard("hello", shayri)
                                         })
                                 Divider(
                                     thickness = 1.dp,
@@ -521,8 +530,7 @@ fun Greeting(name: String = "Shayri", shayri: Shayri? = null) {
                                     modifier = Modifier
                                         .fillMaxSize()
                                         .weight(1f)
-                                        .clickable {
-                                        })
+                                        .clickable {})
 
 
                             }

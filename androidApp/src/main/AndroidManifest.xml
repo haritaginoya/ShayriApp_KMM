@@ -7,6 +7,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".PageShayri"
+            android:exported="false"
+            android:label="@string/title_activity_page_shayri"
+            android:theme="@style/AppTheme" />
+        <activity
             android:name=".Shayri"
             android:exported="false"
             android:label="@string/title_activity_shayri"

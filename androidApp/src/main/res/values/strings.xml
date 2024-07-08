@@ -1,3 +1,4 @@
 <resources>
     <string name="title_activity_shayri">Shayri</string>
+    <string name="title_activity_page_shayri">PageShayri</string>
 </resources>
